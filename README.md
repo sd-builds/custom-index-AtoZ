@@ -51,21 +51,7 @@ This project implements a complete data engineering pipeline that:
    python main.py
    ```
 
-## Usage
-
-## Data Sources
-
-### Primary Data Source: Yahoo Finance
-**Chosen for the following reasons:**
-- **Free and reliable**: No API key required, high uptime
-- **Comprehensive coverage**: Covers all major US stocks
-- **Historical data**: Extensive historical data availability
-- **Real-time updates**: Daily price and volume data
-- **Market cap calculation**: Provides shares outstanding for market cap calculation
-
-## Output Files
-
-### Excel Export Structure
+### I. Output Excel Report Structure
 
 The application generates a comprehensive Excel file with the following sheets:
 
@@ -75,17 +61,20 @@ The application generates a comprehensive Excel file with the following sheets:
 - **Daily Return %**: Daily percentage return
 - **Cumulative Return %**: Cumulative return since inception
 
-#### 2. `daily_composition`
+#### 2. `graph for index_perfomance`
+- **Displays a index vs date graph for better view on perfomance trends**
+
+#### 3. `daily_composition`
 - **Date**: Trading date
 - **Constituents**: Comma-separated list of 100 stock symbols
 
-#### 3. `composition_changes`
+#### 4. `composition_changes`
 - **Date**: Date of rebalancing
 - **Tickers Added**: New stocks added to index
 - **Tickers Removed**: Stocks removed from index
 - **Number Added/Removed**: Count of changes
 
-#### 4. `summary_metrics`
+#### 5. `summary_metrics`
 - **Total Composition Changes**: Number of rebalancing events
 - **Best/Worst Performing Days**: Dates and returns
 - **Total Return**: Overall index performance
