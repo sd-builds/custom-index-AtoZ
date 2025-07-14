@@ -22,9 +22,10 @@ This project implements a complete data engineering pipeline that:
 
 ### Key Components
 - **IndexTracker**: Main class handling all operations
-- **Database Management**: Automated schema creation and data persistence
-- **Error Handling**: Robust error handling and logging
-- **Modular Design**: Clean, maintainable code structure
+- **DatabaseHandler**: Class for handling schema creation and data persistence
+- **Error Handling**: Robust error handling and logging throughout the repo
+- **Modular Design**: Clean, maintainable code structure for achieving best code quality.
+- **Metrics and Graph**: Useful metrics and graph in the excel output for better performance understanding.
 
 ## Installation
 
@@ -51,7 +52,7 @@ This project implements a complete data engineering pipeline that:
    python main.py
    ```
 
-### I. Output Excel Report Structure
+## Output Excel Report Structure
 
 The application generates a comprehensive Excel file with the following sheets:
 
