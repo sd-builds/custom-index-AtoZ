@@ -1,0 +1,335 @@
+2025-07-14 16:55:49,233 - INFO - Database setup completed successfully
+
+2025-07-14 16:55:49,233 - INFO - ============================================================
+2025-07-14 16:55:49,233 - INFO - STARTING EQUAL-WEIGHTED INDEX ANALYSIS
+2025-07-14 16:55:49,233 - INFO - ============================================================
+2025-07-14 16:55:49,233 - INFO - Analysis period: 2025-06-14 to 2025-07-14
+2025-07-14 16:55:49,233 - INFO - Days back: 30
+2025-07-14 16:55:49,233 - INFO - 
+---STEP 1: GETTING STOCK SYMBOLS---
+2025-07-14 16:55:49,233 - ERROR - Failed to fetch S&P 500 symbols: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-07-14 16:55:49,233 - INFO - Total symbols to process: 101
+2025-07-14 16:55:49,233 - INFO - 
+---STEP 2: FETCHING STOCK DATA---
+2025-07-14 16:55:49,233 - INFO - Starting data fetch for 100 symbols from 2025-06-14 to 2025-07-14
+2025-07-14 16:55:49,233 - INFO - Processing batch 1/10: ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'META', 'BRK-B', 'UNH', 'JNJ']
+2025-07-14 16:56:01,827 - INFO - Processing batch 2/10: ['JPM', 'V', 'PG', 'MA', 'HD', 'CVX', 'LLY', 'ABBV', 'BAC', 'KO']
+2025-07-14 16:56:11,048 - INFO - Processing batch 3/10: ['AVGO', 'PEP', 'COST', 'TMO', 'WMT', 'DIS', 'ABT', 'ACN', 'VZ', 'ADBE']
+2025-07-14 16:56:20,751 - INFO - Processing batch 4/10: ['DHR', 'NFLX', 'TXN', 'NKE', 'RTX', 'QCOM', 'CRM', 'NEE', 'ORCL', 'INTC']
+2025-07-14 16:56:29,995 - INFO - Processing batch 5/10: ['AMD', 'IBM', 'GS', 'INTU', 'CAT', 'HON', 'SPGI', 'BKNG', 'LOW', 'BA']
+2025-07-14 16:56:39,684 - INFO - Processing batch 6/10: ['SBUX', 'GILD', 'AXP', 'BLK', 'SYK', 'MDLZ', 'ADP', 'ISRG', 'TGT', 'LRCX']
+2025-07-14 16:56:51,719 - INFO - Processing batch 7/10: ['ADI', 'VRTX', 'PLD', 'MU', 'ANTM', 'CI', 'SO', 'ZTS', 'MMM', 'FIS']
+2025-07-14 16:56:55,701 - ERROR - $ANTM: possibly delisted; no timezone found
+2025-07-14 16:56:55,716 - WARNING - No historical data found for ANTM
+2025-07-14 16:57:01,635 - INFO - Processing batch 8/10: ['DUK', 'CSX', 'BSX', 'EQIX', 'CL', 'ITW', 'NSC', 'AON', 'CME', 'WM']
+2025-07-14 16:57:10,990 - INFO - Processing batch 9/10: ['SHW', 'GD', 'USB', 'PNC', 'MCO', 'COP', 'EMR', 'WELL', 'ICE', 'KLAC']
+2025-07-14 16:57:19,665 - INFO - Processing batch 10/10: ['APD', 'RACE', 'NOC', 'F', 'GM', 'PYPL', 'ATVI', 'UBER', 'ABNB', 'SNOW']
+2025-07-14 16:57:25,565 - ERROR - $ATVI: possibly delisted; no timezone found
+2025-07-14 16:57:25,565 - WARNING - No historical data found for ATVI
+2025-07-14 16:57:29,817 - INFO - Data fetch completed. Success: 98, Failed: 2
+2025-07-14 16:57:29,817 - WARNING - Failed symbols: ['ANTM', 'ATVI']
+2025-07-14 16:57:29,841 - INFO - Final dataset: 1764 rows, 98 unique symbols
+2025-07-14 16:57:29,841 - INFO - Date range in data: 2025-06-16 to 2025-07-11
+2025-07-14 16:57:29,851 - INFO - Stock data fetched successfully: 1764 rows
+2025-07-14 16:57:29,851 - INFO - 
+---STEP 3: STORING DATA IN DATABASE---
+2025-07-14 16:57:29,851 - INFO - Storing data for 1764 rows across 98 symbols
+2025-07-14 16:57:29,901 - INFO - Stock data stored successfully
+2025-07-14 16:57:29,924 - INFO - Data verification - Stocks: 98, Trading days: 18
+2025-07-14 16:57:29,924 - INFO - 
+---STEP 4: CALCULATING INDEX---
+2025-07-14 16:57:29,924 - INFO - Calculating daily index from 2025-06-14 to 2025-07-14
+2025-07-14 16:57:29,924 - INFO - Found 18 trading days
+2025-07-14 16:57:29,942 - INFO - Processed 1/18 days. Latest index value: 100.00
+2025-07-14 16:57:30,819 - INFO - Processed 6/18 days. Latest index value: 101.06
+2025-07-14 16:57:32,178 - INFO - Processed 11/18 days. Latest index value: 103.20
+2025-07-14 16:57:33,628 - INFO - Processed 16/18 days. Latest index value: 103.53
+2025-07-14 16:57:34,282 - INFO - Processed 18/18 days. Latest index value: 103.30
+2025-07-14 16:57:34,283 - INFO - Index calculation completed. Final index value: 103.30
+2025-07-14 16:57:34,283 - INFO - 
+---STEP 5: EXPORTING RESULTS---
+2025-07-14 16:57:35,232 - INFO - Calculating composition changes...
+2025-07-14 16:57:35,232 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 16:57:35,288 - INFO - Composition changes calculated: 17 total records
+2025-07-14 16:57:35,291 - INFO - Total rebalancing events: 0
+2025-07-14 16:57:35,302 - INFO - Calculating composition changes...
+2025-07-14 16:57:35,304 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 16:57:35,346 - INFO - Composition changes calculated: 17 total records
+2025-07-14 16:57:35,349 - INFO - Total rebalancing events: 0
+2025-07-14 16:57:35,475 - INFO - Excel file exported successfully to output/index_analysis.xlsx
+
+2025-07-14 16:57:35,475 - INFO - ============================================================
+2025-07-14 16:57:35,475 - INFO - ANALYSIS COMPLETED SUCCESSFULLY!
+2025-07-14 16:57:35,475 - INFO - ============================================================
+2025-07-14 16:57:35,475 - INFO - Final index return: 3.30%
+2025-07-14 16:57:35,475 - INFO - Database connection closed
+2025-07-14 17:01:04,328 - WARNING - Existing database at output/stock_data.db deleted.
+2025-07-14 17:01:04,363 - INFO - Database setup completed successfully
+
+2025-07-14 17:01:04,363 - INFO - ============================================================
+2025-07-14 17:01:04,363 - INFO - STARTING EQUAL-WEIGHTED INDEX ANALYSIS
+2025-07-14 17:01:04,363 - INFO - ============================================================
+2025-07-14 17:01:04,363 - INFO - Analysis period: 2025-06-14 to 2025-07-14
+2025-07-14 17:01:04,363 - INFO - Days back: 30
+2025-07-14 17:01:04,378 - INFO - 
+---STEP 1: GETTING STOCK SYMBOLS---
+2025-07-14 17:01:04,379 - ERROR - Failed to fetch S&P 500 symbols: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-07-14 17:01:04,380 - INFO - Total symbols to process: 101
+2025-07-14 17:01:04,380 - INFO - 
+---STEP 2: FETCHING STOCK DATA---
+2025-07-14 17:01:04,380 - INFO - Starting data fetch for 100 symbols from 2025-06-14 to 2025-07-14
+2025-07-14 17:01:04,380 - INFO - Processing batch 1/10: ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'META', 'BRK-B', 'UNH', 'JNJ']
+2025-07-14 17:01:09,709 - ERROR - $META: possibly delisted; no price data found  (1d 2025-06-14 -> 2025-07-14)
+2025-07-14 17:01:09,724 - WARNING - No historical data found for META
+2025-07-14 17:01:13,790 - INFO - Processing batch 2/10: ['JPM', 'V', 'PG', 'MA', 'HD', 'CVX', 'LLY', 'ABBV', 'BAC', 'KO']
+2025-07-14 17:01:19,579 - WARNING - Could not get company info for ABBV: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2025-07-14 17:01:20,651 - ERROR - $KO: possibly delisted; no price data found  (1d 2025-06-14 -> 2025-07-14)
+2025-07-14 17:01:20,651 - WARNING - No historical data found for KO
+2025-07-14 17:01:39,767 - WARNING - Existing database at output/stock_data.db deleted.
+2025-07-14 17:01:39,813 - INFO - Database setup completed successfully
+
+2025-07-14 17:01:39,813 - INFO - ============================================================
+2025-07-14 17:01:39,813 - INFO - STARTING EQUAL-WEIGHTED INDEX ANALYSIS
+2025-07-14 17:01:39,813 - INFO - ============================================================
+2025-07-14 17:01:39,813 - INFO - Analysis period: 2025-06-14 to 2025-07-14
+2025-07-14 17:01:39,813 - INFO - Days back: 30
+2025-07-14 17:01:39,813 - INFO - 
+---STEP 1: GETTING STOCK SYMBOLS---
+2025-07-14 17:01:40,527 - INFO - Retrieved 503 S&P 500 symbols
+2025-07-14 17:01:40,527 - INFO - Total symbols to process: 503
+2025-07-14 17:01:40,527 - INFO - 
+---STEP 2: FETCHING STOCK DATA---
+2025-07-14 17:01:40,527 - INFO - Starting data fetch for 100 symbols from 2025-06-14 to 2025-07-14
+2025-07-14 17:01:40,527 - INFO - Processing batch 1/10: ['MMM', 'AOS', 'ABT', 'ABBV', 'ACN', 'ADBE', 'AMD', 'AES', 'AFL', 'A']
+2025-07-14 17:01:50,500 - INFO - Processing batch 2/10: ['APD', 'ABNB', 'AKAM', 'ALB', 'ARE', 'ALGN', 'ALLE', 'LNT', 'ALL', 'GOOGL']
+2025-07-14 17:01:59,640 - INFO - Processing batch 3/10: ['GOOG', 'MO', 'AMZN', 'AMCR', 'AEE', 'AEP', 'AXP', 'AIG', 'AMT', 'AWK']
+2025-07-14 17:02:09,119 - INFO - Processing batch 4/10: ['AMP', 'AME', 'AMGN', 'APH', 'ADI', 'ANSS', 'AON', 'APA', 'APO', 'AAPL']
+2025-07-14 17:02:19,183 - INFO - Processing batch 5/10: ['AMAT', 'APTV', 'ACGL', 'ADM', 'ANET', 'AJG', 'AIZ', 'T', 'ATO', 'ADSK']
+2025-07-14 17:02:28,545 - INFO - Processing batch 6/10: ['ADP', 'AZO', 'AVB', 'AVY', 'AXON', 'BKR', 'BALL', 'BAC', 'BAX', 'BDX']
+2025-07-14 17:02:39,028 - INFO - Processing batch 7/10: ['BRK-B', 'BBY', 'TECH', 'BIIB', 'BLK', 'BX', 'BK', 'BA', 'BKNG', 'BSX']
+2025-07-14 17:02:48,637 - INFO - Processing batch 8/10: ['BMY', 'AVGO', 'BR', 'BRO', 'BF-B', 'BLDR', 'BG', 'BXP', 'CHRW', 'CDNS']
+2025-07-14 17:02:58,322 - INFO - Processing batch 9/10: ['CZR', 'CPT', 'CPB', 'COF', 'CAH', 'KMX', 'CCL', 'CARR', 'CAT', 'CBOE']
+2025-07-14 17:03:07,700 - INFO - Processing batch 10/10: ['CBRE', 'CDW', 'COR', 'CNC', 'CNP', 'CF', 'CRL', 'SCHW', 'CHTR', 'CVX']
+2025-07-14 17:03:16,776 - INFO - Data fetch completed. Success: 100, Failed: 0
+2025-07-14 17:03:16,780 - INFO - Final dataset: 1800 rows, 100 unique symbols
+2025-07-14 17:03:16,780 - INFO - Date range in data: 2025-06-16 to 2025-07-11
+2025-07-14 17:03:16,787 - INFO - Stock data fetched successfully: 1800 rows
+2025-07-14 17:03:16,787 - INFO - 
+---STEP 3: STORING DATA IN DATABASE---
+2025-07-14 17:03:16,787 - INFO - Storing data for 1800 rows across 100 symbols
+2025-07-14 17:03:16,866 - INFO - Stock data stored successfully
+2025-07-14 17:03:16,875 - INFO - Data verification - Stocks: 100, Trading days: 18
+2025-07-14 17:03:16,875 - INFO - 
+---STEP 4: CALCULATING INDEX---
+2025-07-14 17:03:16,875 - INFO - Calculating daily index from 2025-06-14 to 2025-07-14
+2025-07-14 17:03:16,878 - INFO - Found 18 trading days
+2025-07-14 17:03:16,903 - INFO - Processed 1/18 days. Latest index value: 100.00
+2025-07-14 17:03:17,613 - INFO - Processed 6/18 days. Latest index value: 100.69
+2025-07-14 17:03:18,379 - INFO - Processed 11/18 days. Latest index value: 102.71
+2025-07-14 17:03:19,163 - INFO - Processed 16/18 days. Latest index value: 103.27
+2025-07-14 17:03:19,471 - INFO - Processed 18/18 days. Latest index value: 102.97
+2025-07-14 17:03:19,471 - INFO - Index calculation completed. Final index value: 102.97
+2025-07-14 17:03:19,471 - INFO - 
+---STEP 5: EXPORTING RESULTS---
+2025-07-14 17:03:19,471 - WARNING - Existing output at output/index_analysis.xlsx deleted.
+2025-07-14 17:03:19,491 - INFO - Calculating composition changes...
+2025-07-14 17:03:19,492 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 17:03:19,517 - INFO - Composition changes calculated: 17 total records
+2025-07-14 17:03:19,518 - INFO - Total rebalancing events: 0
+2025-07-14 17:03:19,519 - INFO - Calculating composition changes...
+2025-07-14 17:03:19,519 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 17:03:19,544 - INFO - Composition changes calculated: 17 total records
+2025-07-14 17:03:19,544 - INFO - Total rebalancing events: 0
+2025-07-14 17:03:19,629 - INFO - Excel file exported successfully to output/index_analysis.xlsx
+
+2025-07-14 17:03:19,629 - INFO - ============================================================
+2025-07-14 17:03:19,630 - INFO - ANALYSIS COMPLETED SUCCESSFULLY!
+2025-07-14 17:03:19,630 - INFO - ============================================================
+2025-07-14 17:03:19,631 - INFO - Final index return: 2.97%
+2025-07-14 17:03:19,632 - INFO - Database connection closed
+2025-07-14 17:05:08,530 - WARNING - Existing database at output/stock_data.db deleted.
+2025-07-14 17:05:08,544 - INFO - Database setup completed successfully
+
+2025-07-14 17:05:08,544 - INFO - ============================================================
+2025-07-14 17:05:08,544 - INFO - STARTING EQUAL-WEIGHTED INDEX ANALYSIS
+2025-07-14 17:05:08,544 - INFO - ============================================================
+2025-07-14 17:05:08,544 - INFO - Analysis period: 2025-06-14 to 2025-07-14
+2025-07-14 17:05:08,544 - INFO - Days back: 30
+2025-07-14 17:05:08,559 - INFO - 
+---STEP 1: GETTING STOCK SYMBOLS---
+2025-07-14 17:05:09,341 - INFO - Retrieved 503 S&P 500 symbols
+2025-07-14 17:05:09,341 - INFO - Total symbols to process: 503
+2025-07-14 17:05:09,341 - INFO - 
+---STEP 2: FETCHING STOCK DATA---
+2025-07-14 17:05:09,341 - INFO - Starting data fetch for 100 symbols from 2025-06-14 to 2025-07-14
+2025-07-14 17:05:09,341 - INFO - Processing batch 1/10: ['MMM', 'AOS', 'ABT', 'ABBV', 'ACN', 'ADBE', 'AMD', 'AES', 'AFL', 'A']
+2025-07-14 17:05:18,419 - INFO - Processing batch 2/10: ['APD', 'ABNB', 'AKAM', 'ALB', 'ARE', 'ALGN', 'ALLE', 'LNT', 'ALL', 'GOOGL']
+2025-07-14 17:05:26,105 - INFO - Processing batch 3/10: ['GOOG', 'MO', 'AMZN', 'AMCR', 'AEE', 'AEP', 'AXP', 'AIG', 'AMT', 'AWK']
+2025-07-14 17:05:33,844 - INFO - Processing batch 4/10: ['AMP', 'AME', 'AMGN', 'APH', 'ADI', 'ANSS', 'AON', 'APA', 'APO', 'AAPL']
+2025-07-14 17:05:41,358 - INFO - Processing batch 5/10: ['AMAT', 'APTV', 'ACGL', 'ADM', 'ANET', 'AJG', 'AIZ', 'T', 'ATO', 'ADSK']
+2025-07-14 17:05:48,951 - INFO - Processing batch 6/10: ['ADP', 'AZO', 'AVB', 'AVY', 'AXON', 'BKR', 'BALL', 'BAC', 'BAX', 'BDX']
+2025-07-14 17:05:57,059 - INFO - Processing batch 7/10: ['BRK-B', 'BBY', 'TECH', 'BIIB', 'BLK', 'BX', 'BK', 'BA', 'BKNG', 'BSX']
+2025-07-14 17:06:05,125 - INFO - Processing batch 8/10: ['BMY', 'AVGO', 'BR', 'BRO', 'BF-B', 'BLDR', 'BG', 'BXP', 'CHRW', 'CDNS']
+2025-07-14 17:06:12,971 - INFO - Processing batch 9/10: ['CZR', 'CPT', 'CPB', 'COF', 'CAH', 'KMX', 'CCL', 'CARR', 'CAT', 'CBOE']
+2025-07-14 17:06:21,303 - INFO - Processing batch 10/10: ['CBRE', 'CDW', 'COR', 'CNC', 'CNP', 'CF', 'CRL', 'SCHW', 'CHTR', 'CVX']
+2025-07-14 17:06:29,217 - INFO - Data fetch completed. Success: 100, Failed: 0
+2025-07-14 17:06:29,217 - INFO - Final dataset: 1800 rows, 100 unique symbols
+2025-07-14 17:06:29,217 - INFO - Date range in data: 2025-06-16 to 2025-07-11
+2025-07-14 17:06:29,226 - INFO - Stock data fetched successfully: 1800 rows
+2025-07-14 17:06:29,226 - INFO - 
+---STEP 3: STORING DATA IN DATABASE---
+2025-07-14 17:06:29,227 - INFO - Storing data for 1800 rows across 100 symbols
+2025-07-14 17:06:29,273 - INFO - Stock data stored successfully
+2025-07-14 17:06:29,290 - INFO - Data verification - Stocks: 100, Trading days: 18
+2025-07-14 17:06:29,291 - INFO - 
+---STEP 4: CALCULATING INDEX---
+2025-07-14 17:06:29,291 - INFO - Calculating daily index from 2025-06-14 to 2025-07-14
+2025-07-14 17:06:29,292 - INFO - Found 18 trading days
+2025-07-14 17:06:29,305 - INFO - Processed 1/18 days. Latest index value: 100.00
+2025-07-14 17:06:29,983 - INFO - Processed 6/18 days. Latest index value: 100.69
+2025-07-14 17:06:30,770 - INFO - Processed 11/18 days. Latest index value: 102.71
+2025-07-14 17:06:31,517 - INFO - Processed 16/18 days. Latest index value: 103.27
+2025-07-14 17:06:31,816 - INFO - Processed 18/18 days. Latest index value: 102.97
+2025-07-14 17:06:31,816 - INFO - Index calculation completed. Final index value: 102.97
+2025-07-14 17:06:31,816 - INFO - 
+---STEP 5: EXPORTING RESULTS---
+2025-07-14 17:06:31,816 - WARNING - Existing output at output/index_analysis.xlsx deleted.
+2025-07-14 17:06:31,839 - INFO - Calculating composition changes...
+2025-07-14 17:06:31,845 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 17:06:31,858 - INFO - Composition changes calculated: 17 total records
+2025-07-14 17:06:31,858 - INFO - Total rebalancing events: 0
+2025-07-14 17:06:31,870 - INFO - Calculating composition changes...
+2025-07-14 17:06:31,871 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 17:06:31,891 - INFO - Composition changes calculated: 17 total records
+2025-07-14 17:06:31,891 - INFO - Total rebalancing events: 0
+2025-07-14 17:06:31,935 - INFO - Excel file exported successfully to output/index_analysis.xlsx
+
+2025-07-14 17:06:31,935 - INFO - ============================================================
+2025-07-14 17:06:31,935 - INFO - ANALYSIS COMPLETED SUCCESSFULLY!
+2025-07-14 17:06:31,935 - INFO - ============================================================
+2025-07-14 17:06:31,935 - INFO - Final index return: 2.97%
+2025-07-14 17:06:31,935 - INFO - Database connection closed
+2025-07-14 17:07:13,973 - WARNING - Existing database at output/stock_data.db deleted.
+2025-07-14 17:07:14,025 - INFO - Database setup completed successfully
+
+2025-07-14 17:07:14,026 - INFO - ============================================================
+2025-07-14 17:07:14,026 - INFO - STARTING EQUAL-WEIGHTED INDEX ANALYSIS
+2025-07-14 17:07:14,026 - INFO - ============================================================
+2025-07-14 17:07:14,026 - INFO - Analysis period: 2025-06-14 to 2025-07-14
+2025-07-14 17:07:14,027 - INFO - Days back: 30
+2025-07-14 17:07:14,027 - INFO - 
+---STEP 1: GETTING STOCK SYMBOLS---
+2025-07-14 17:07:14,765 - INFO - Retrieved 503 S&P 500 symbols
+2025-07-14 17:07:14,765 - INFO - Total symbols to process: 503
+2025-07-14 17:07:14,765 - INFO - 
+---STEP 2: FETCHING STOCK DATA---
+2025-07-14 17:07:14,765 - INFO - Starting data fetch for 100 symbols from 2025-06-14 to 2025-07-14
+2025-07-14 17:07:14,765 - INFO - Processing batch 1/10: ['MMM', 'AOS', 'ABT', 'ABBV', 'ACN', 'ADBE', 'AMD', 'AES', 'AFL', 'A']
+2025-07-14 17:07:24,129 - INFO - Processing batch 2/10: ['APD', 'ABNB', 'AKAM', 'ALB', 'ARE', 'ALGN', 'ALLE', 'LNT', 'ALL', 'GOOGL']
+2025-07-14 17:07:32,235 - INFO - Processing batch 3/10: ['GOOG', 'MO', 'AMZN', 'AMCR', 'AEE', 'AEP', 'AXP', 'AIG', 'AMT', 'AWK']
+2025-07-14 17:07:40,510 - INFO - Processing batch 4/10: ['AMP', 'AME', 'AMGN', 'APH', 'ADI', 'ANSS', 'AON', 'APA', 'APO', 'AAPL']
+2025-07-14 17:07:48,760 - INFO - Processing batch 5/10: ['AMAT', 'APTV', 'ACGL', 'ADM', 'ANET', 'AJG', 'AIZ', 'T', 'ATO', 'ADSK']
+2025-07-14 17:07:57,438 - INFO - Processing batch 6/10: ['ADP', 'AZO', 'AVB', 'AVY', 'AXON', 'BKR', 'BALL', 'BAC', 'BAX', 'BDX']
+2025-07-14 17:08:06,446 - INFO - Processing batch 7/10: ['BRK-B', 'BBY', 'TECH', 'BIIB', 'BLK', 'BX', 'BK', 'BA', 'BKNG', 'BSX']
+2025-07-14 17:08:15,107 - INFO - Processing batch 8/10: ['BMY', 'AVGO', 'BR', 'BRO', 'BF-B', 'BLDR', 'BG', 'BXP', 'CHRW', 'CDNS']
+2025-07-14 17:08:23,243 - INFO - Processing batch 9/10: ['CZR', 'CPT', 'CPB', 'COF', 'CAH', 'KMX', 'CCL', 'CARR', 'CAT', 'CBOE']
+2025-07-14 17:08:43,577 - INFO - Processing batch 10/10: ['CBRE', 'CDW', 'COR', 'CNC', 'CNP', 'CF', 'CRL', 'SCHW', 'CHTR', 'CVX']
+2025-07-14 17:08:51,394 - INFO - Data fetch completed. Success: 100, Failed: 0
+2025-07-14 17:08:51,394 - INFO - Final dataset: 1800 rows, 100 unique symbols
+2025-07-14 17:08:51,394 - INFO - Date range in data: 2025-06-16 to 2025-07-11
+2025-07-14 17:08:51,407 - INFO - Stock data fetched successfully: 1800 rows
+2025-07-14 17:08:51,408 - INFO - 
+---STEP 3: STORING DATA IN DATABASE---
+2025-07-14 17:08:51,409 - INFO - Storing data for 1800 rows across 100 symbols
+2025-07-14 17:08:51,494 - INFO - Stock data stored successfully
+2025-07-14 17:08:51,512 - INFO - Data verification - Stocks: 100, Trading days: 18
+2025-07-14 17:08:51,513 - INFO - 
+---STEP 4: CALCULATING INDEX---
+2025-07-14 17:08:51,514 - INFO - Calculating daily index from 2025-06-14 to 2025-07-14
+2025-07-14 17:08:51,517 - INFO - Found 18 trading days
+2025-07-14 17:08:51,537 - INFO - Processed 1/18 days. Latest index value: 100.00
+2025-07-14 17:08:52,424 - INFO - Processed 6/18 days. Latest index value: 100.69
+2025-07-14 17:08:53,205 - INFO - Processed 11/18 days. Latest index value: 102.71
+2025-07-14 17:08:53,941 - INFO - Processed 16/18 days. Latest index value: 103.27
+2025-07-14 17:08:54,250 - INFO - Processed 18/18 days. Latest index value: 102.97
+2025-07-14 17:08:54,250 - INFO - Index calculation completed. Final index value: 102.97
+2025-07-14 17:08:54,250 - INFO - 
+---STEP 5: EXPORTING RESULTS---
+2025-07-14 17:08:54,250 - WARNING - Existing output at output/index_analysis.xlsx deleted.
+2025-07-14 17:08:54,286 - INFO - Calculating composition changes...
+2025-07-14 17:08:54,287 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 17:08:54,306 - INFO - Composition changes calculated: 17 total records
+2025-07-14 17:08:54,307 - INFO - Total rebalancing events: 0
+2025-07-14 17:08:54,311 - INFO - Calculating composition changes...
+2025-07-14 17:08:54,313 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 17:08:54,332 - INFO - Composition changes calculated: 17 total records
+2025-07-14 17:08:54,333 - INFO - Total rebalancing events: 0
+2025-07-14 17:08:54,381 - INFO - Excel file exported successfully to output/index_analysis.xlsx
+
+2025-07-14 17:08:54,381 - INFO - ============================================================
+2025-07-14 17:08:54,381 - INFO - ANALYSIS COMPLETED SUCCESSFULLY!
+2025-07-14 17:08:54,381 - INFO - ============================================================
+2025-07-14 17:08:54,381 - INFO - Final index return: 2.97%
+2025-07-14 17:08:54,381 - INFO - Database connection closed
+2025-07-14 19:17:57,197 - WARNING - Existing database at output/stock_data.db deleted.
+2025-07-14 19:17:57,247 - INFO - Database setup completed successfully
+
+2025-07-14 19:17:57,247 - INFO - ============================================================
+2025-07-14 19:17:57,247 - INFO - STARTING EQUAL-WEIGHTED INDEX ANALYSIS
+2025-07-14 19:17:57,247 - INFO - ============================================================
+2025-07-14 19:17:57,250 - INFO - Analysis period: 2025-06-14 to 2025-07-14
+2025-07-14 19:17:57,250 - INFO - Days back: 30
+2025-07-14 19:17:57,252 - INFO - 
+---STEP 1: GETTING STOCK SYMBOLS---
+2025-07-14 19:17:58,224 - INFO - Retrieved 503 S&P 500 symbols
+2025-07-14 19:17:58,224 - INFO - Total symbols to process: 503
+2025-07-14 19:17:58,224 - INFO - 
+---STEP 2: FETCHING STOCK DATA---
+2025-07-14 19:17:58,224 - INFO - Starting data fetch for 100 symbols from 2025-06-14 to 2025-07-14
+2025-07-14 19:17:58,224 - INFO - Processing batch 1/10: ['MMM', 'AOS', 'ABT', 'ABBV', 'ACN', 'ADBE', 'AMD', 'AES', 'AFL', 'A']
+2025-07-14 19:18:11,709 - INFO - Processing batch 2/10: ['APD', 'ABNB', 'AKAM', 'ALB', 'ARE', 'ALGN', 'ALLE', 'LNT', 'ALL', 'GOOGL']
+2025-07-14 19:18:21,907 - INFO - Processing batch 3/10: ['GOOG', 'MO', 'AMZN', 'AMCR', 'AEE', 'AEP', 'AXP', 'AIG', 'AMT', 'AWK']
+2025-07-14 19:18:33,071 - INFO - Processing batch 4/10: ['AMP', 'AME', 'AMGN', 'APH', 'ADI', 'ANSS', 'AON', 'APA', 'APO', 'AAPL']
+2025-07-14 19:18:42,419 - INFO - Processing batch 5/10: ['AMAT', 'APTV', 'ACGL', 'ADM', 'ANET', 'AJG', 'AIZ', 'T', 'ATO', 'ADSK']
+2025-07-14 19:18:52,947 - INFO - Processing batch 6/10: ['ADP', 'AZO', 'AVB', 'AVY', 'AXON', 'BKR', 'BALL', 'BAC', 'BAX', 'BDX']
+2025-07-14 19:19:03,217 - INFO - Processing batch 7/10: ['BRK-B', 'BBY', 'TECH', 'BIIB', 'BLK', 'BX', 'BK', 'BA', 'BKNG', 'BSX']
+2025-07-14 19:19:13,611 - INFO - Processing batch 8/10: ['BMY', 'AVGO', 'BR', 'BRO', 'BF-B', 'BLDR', 'BG', 'BXP', 'CHRW', 'CDNS']
+2025-07-14 19:19:23,952 - INFO - Processing batch 9/10: ['CZR', 'CPT', 'CPB', 'COF', 'CAH', 'KMX', 'CCL', 'CARR', 'CAT', 'CBOE']
+2025-07-14 19:19:33,550 - INFO - Processing batch 10/10: ['CBRE', 'CDW', 'COR', 'CNC', 'CNP', 'CF', 'CRL', 'SCHW', 'CHTR', 'CVX']
+2025-07-14 19:19:43,324 - INFO - Data fetch completed. Success: 100, Failed: 0
+2025-07-14 19:19:43,351 - INFO - Final dataset: 1800 rows, 100 unique symbols
+2025-07-14 19:19:43,351 - INFO - Date range in data: 2025-06-16 to 2025-07-11
+2025-07-14 19:19:43,351 - INFO - Stock data fetched successfully: 1800 rows
+2025-07-14 19:19:43,351 - INFO - 
+---STEP 3: STORING DATA IN DATABASE---
+2025-07-14 19:19:43,360 - INFO - Storing data for 1800 rows across 100 symbols
+2025-07-14 19:19:43,494 - INFO - Stock data stored successfully
+2025-07-14 19:19:43,547 - INFO - Data verification - Stocks: 100, Trading days: 18
+2025-07-14 19:19:43,547 - INFO - 
+---STEP 4: CALCULATING INDEX---
+2025-07-14 19:19:43,548 - INFO - Calculating daily index from 2025-06-14 to 2025-07-14
+2025-07-14 19:19:43,548 - INFO - Found 18 trading days
+2025-07-14 19:19:43,594 - INFO - Processed 1/18 days. Latest index value: 100.00
+2025-07-14 19:19:44,847 - INFO - Processed 6/18 days. Latest index value: 100.69
+2025-07-14 19:19:46,091 - INFO - Processed 11/18 days. Latest index value: 102.71
+2025-07-14 19:19:47,133 - INFO - Processed 16/18 days. Latest index value: 103.27
+2025-07-14 19:19:47,535 - INFO - Processed 18/18 days. Latest index value: 102.97
+2025-07-14 19:19:47,541 - INFO - Index calculation completed. Final index value: 102.97
+2025-07-14 19:19:47,541 - INFO - 
+---STEP 5: EXPORTING RESULTS---
+2025-07-14 19:19:47,543 - WARNING - Existing output at output/index_analysis.xlsx deleted.
+2025-07-14 19:19:47,711 - INFO - Calculating composition changes...
+2025-07-14 19:19:47,711 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 19:19:47,781 - INFO - Composition changes calculated: 17 total records
+2025-07-14 19:19:47,786 - INFO - Total rebalancing events: 0
+2025-07-14 19:19:47,805 - INFO - Calculating composition changes...
+2025-07-14 19:19:47,808 - INFO - Analyzing composition changes across 18 trading days
+2025-07-14 19:19:47,880 - INFO - Composition changes calculated: 17 total records
+2025-07-14 19:19:47,886 - INFO - Total rebalancing events: 0
+2025-07-14 19:19:48,029 - INFO - Excel file exported successfully to output/index_analysis.xlsx
+
+2025-07-14 19:19:48,031 - INFO - ============================================================
+2025-07-14 19:19:48,031 - INFO - ANALYSIS COMPLETED SUCCESSFULLY!
+2025-07-14 19:19:48,031 - INFO - ============================================================
+2025-07-14 19:19:48,035 - INFO - Final index return: 2.97%
+2025-07-14 19:19:48,038 - INFO - Database connection closed
