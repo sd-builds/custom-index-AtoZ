@@ -11,9 +11,6 @@ logger = setup_logging()
 def get_sp500_symbols() -> List[str]:
     """
     Fetch S&P 500 symbols as a starting point for US stocks.
-    
-    Returns:
-        List[str]: List of stock symbols
     """
     try:
         # Get S&P 500 symbols from Wikipedia
@@ -35,14 +32,6 @@ def get_sp500_symbols() -> List[str]:
 def fetch_stock_data(symbols: List[str], start_date: str, end_date: str) -> pd.DataFrame:
     """
     Fetch historical stock data for given symbols.
-    
-    Args:
-        symbols (List[str]): List of stock symbols
-        start_date (str): Start date in YYYY-MM-DD format
-        end_date (str): End date in YYYY-MM-DD format
-        
-    Returns:
-        pd.DataFrame: Historical stock data
     """
     logger.info(f"Starting data fetch for {len(symbols)} symbols from {start_date} to {end_date}")
     all_data = []

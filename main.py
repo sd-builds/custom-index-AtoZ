@@ -49,7 +49,7 @@ class IndexTracker:
             
             # Step 2: Fetch stock data
             logger.info("\n---STEP 2: FETCHING STOCK DATA---")
-            stock_data = fetch_stock_data(symbols[:100], start_date_str, end_date_str)  # Limit to first 100 for testing
+            stock_data = fetch_stock_data(symbols[:100], start_date_str, end_date_str)
             
             if stock_data.empty:
                 logger.error("No stock data was fetched. Analysis cannot proceed.")
